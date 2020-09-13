@@ -657,7 +657,7 @@ function car_movement()
   if(player.collide(car1) || player.collide(car2) || player.collide(car3 || player.collide(car4)))
   {
     score = score -1;
-    crash_sound.play()
+    crashed_sound.play()
   }
 
 }
