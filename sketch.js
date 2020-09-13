@@ -10,7 +10,7 @@ var pizza1, pizza2, pizza3, pizza4;
 var ord1,ord2,ord3,ord4;
 var road1,road2, road3, road4;
 var car1, car2, car3, car4;
-
+var point_sound, crashed_sound;
 /*
 function preload()
 {
@@ -21,6 +21,11 @@ house4_img = loadImage("../images/House_final.png");
 shop_img = loadImage("../images/pizza_house.png");
 }
 */
+
+function preload()
+{
+  point_sound = loadSound("../point.wav");
+}  
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
@@ -156,6 +161,7 @@ function draw() {
   if(player.collide(house1) && house1.shapeColor === "red")
   {
     score = score + 10;
+    point_sound.play();
   }
   else if(player.collide(house1) && house1.shapeColor === "green")
   {
@@ -165,6 +171,7 @@ function draw() {
   if(player.collide(house2) && house2.shapeColor === "red")
   {
     score = score + 10;
+    point_sound.play();
   }
   else if(player.collide(house2) && house2.shapeColor === "green")
   {
@@ -174,6 +181,7 @@ function draw() {
   if(player.collide(house3) && house3.shapeColor === "red")
   {
     score = score + 10;
+    point_sound.play()
   }
   else if(player.collide(house3) && house3.shapeColor === "green")
   {
@@ -183,6 +191,7 @@ function draw() {
   if(player.collide(house4) && house4.shapeColor === "red")
   {
     score = score + 10;
+    point_sound.play()
   }
   else if(player.collide(house4) && house4.shapeColor === "green")
   {
@@ -260,6 +269,7 @@ function point_order1()
   if(pizza1.collide(order1) && order1.shapeColor === "red")
   {
     score = score +10;
+    point_sound.play()
     pizza1.destroy()
     pizza1 = createSprite(330,200,10,10);
   pizza1.shapeColor = "red";
@@ -278,6 +288,7 @@ function point_order1()
   if(pizza2.collide(order1) && order1.shapeColor === "blue")
   {
     score = score + 10;
+    point_sound.play()
     pizza2.destroy();
     pizza2 = createSprite(470,200,10,10);
   pizza2.shapeColor = "blue";
@@ -296,6 +307,7 @@ function point_order1()
   if(pizza3.collide(order1) && order1.shapeColor === "green")
   {
     score = score + 10;
+    point_sound.play()
     pizza3.destroy();
     pizza3 = createSprite(400,270,10,10);
   pizza3.shapeColor = "green";
@@ -313,6 +325,7 @@ function point_order1()
   if(pizza4.collide(order1) && order1.shapeColor === "yellow")
   {
     score = score + 10;
+    point_sound.play()
     pizza4.destroy();
     pizza4 = createSprite(400,130,10,10);
   pizza4.shapeColor = "yellow";
@@ -334,6 +347,7 @@ function point_order2()
   if(pizza1.collide(order2) && order2.shapeColor === "red")
   {
     score = score +10;
+    point_sound.play()
     pizza1.destroy()
     pizza1 = createSprite(330,200,10,10);
   pizza1.shapeColor = "red";
@@ -352,6 +366,7 @@ function point_order2()
   if(pizza2.collide(order2) && order2.shapeColor === "blue")
   {
     score = score + 10;
+    point_sound.play()
     pizza2.destroy();
     pizza2 = createSprite(470,200,10,10);
   pizza2.shapeColor = "blue";
@@ -370,6 +385,7 @@ function point_order2()
   if(pizza3.collide(order2) && order2.shapeColor === "green")
   {
     score = score + 10;
+    point_sound.play()
     pizza3.destroy();
     pizza3 = createSprite(400,270,10,10);
   pizza3.shapeColor = "green";
@@ -387,6 +403,7 @@ function point_order2()
   if(pizza4.collide(order2) && order2.shapeColor === "yellow")
   {
     score = score + 10;
+    point_sound.play()
     pizza4.destroy();
     pizza4 = createSprite(400,130,10,10);
   pizza4.shapeColor = "yellow";
@@ -409,6 +426,7 @@ function point_order3()
   if(pizza1.collide(order3) && order3.shapeColor === "red")
   {
     score = score +10;
+    point_sound.play()
     pizza1.destroy()
     pizza1 = createSprite(330,200,10,10);
   pizza1.shapeColor = "red";
@@ -427,6 +445,7 @@ function point_order3()
   if(pizza2.collide(order3) && order3.shapeColor === "blue")
   {
     score = score + 10;
+    point_sound.play()
     pizza2.destroy();
     pizza2 = createSprite(470,200,10,10);
   pizza2.shapeColor = "blue";
@@ -445,6 +464,7 @@ function point_order3()
   if(pizza3.collide(order3) && order3.shapeColor === "green")
   {
     score = score + 10;
+    point_sound.play()
     pizza3.destroy();
     pizza3 = createSprite(400,270,10,10);
   pizza3.shapeColor = "green";
@@ -462,6 +482,7 @@ function point_order3()
   if(pizza4.collide(order3) && order3.shapeColor === "yellow")
   {
     score = score + 10;
+    point_sound.play()
     pizza4.destroy();
     pizza4 = createSprite(400,130,10,10);
   pizza4.shapeColor = "yellow";
@@ -483,6 +504,7 @@ function point_order4()
   if(pizza1.collide(order4) && order4.shapeColor === "red")
   {
     score = score +10;
+    point_sound.play()
     pizza1.destroy()
     pizza1 = createSprite(330,200,10,10);
   pizza1.shapeColor = "red";
@@ -501,6 +523,7 @@ function point_order4()
   if(pizza2.collide(order4) && order4.shapeColor === "blue")
   {
     score = score + 10;
+    point_sound.play()
     pizza2.destroy();
     pizza2 = createSprite(470,200,10,10);
   pizza2.shapeColor = "blue";
@@ -519,6 +542,7 @@ function point_order4()
   if(pizza3.collide(order4) && order4.shapeColor === "green")
   {
     score = score + 10;
+    point_sound.play()
     pizza3.destroy();
     pizza3 = createSprite(400,270,10,10);
   pizza3.shapeColor = "green";
@@ -536,6 +560,7 @@ function point_order4()
   if(pizza4.collide(order4) && order4.shapeColor === "yellow")
   {
     score = score + 10;
+    point_sound.play()
     pizza4.destroy();
     pizza4 = createSprite(400,130,10,10);
   pizza4.shapeColor = "yellow";
