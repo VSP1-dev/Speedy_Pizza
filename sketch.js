@@ -11,6 +11,7 @@ var ord1,ord2,ord3,ord4;
 var road1,road2, road3, road4;
 var car1, car2, car3, car4;
 var point_sound, crashed_sound;
+var player_image;
 /*
 function preload()
 {
@@ -26,6 +27,7 @@ function preload()
 {
   point_sound = loadSound("point.wav");
   crashed_sound = loadSound("crashed.wav");
+  player_image = loadImage("Mini_truck.png");
 }  
 
 function setup() {
@@ -33,6 +35,7 @@ function setup() {
   //point_sound.loop();
   crashed_sound.loop();
   player = createSprite(200, 200, 30, 30);
+  player.addImage("player", player_image);
   house1 = createSprite(100,370,50,50);
   //house1.addImage("house1", house1_img);
   house1.scale = 1.5;
