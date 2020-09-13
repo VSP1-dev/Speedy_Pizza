@@ -33,7 +33,7 @@ function preload()
 function setup() {
   createCanvas(windowWidth,windowHeight);
   //point_sound.loop();
-  crashed_sound.loop();
+  //crashed_sound.loop();
   player = createSprite(200, 200, 30, 30);
   player.addImage("player", player_image);
   house1 = createSprite(100,370,50,50);
