@@ -24,7 +24,7 @@ shop_img = loadImage("../images/pizza_house.png");
 
 function preload()
 {
-  point_sound = loadSound("../point.wav");
+  point_sound = loadSound("point.wav");
 }  
 
 function setup() {
