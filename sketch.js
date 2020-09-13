@@ -25,11 +25,13 @@ shop_img = loadImage("../images/pizza_house.png");
 function preload()
 {
   point_sound = loadSound("point.wav");
+  crashed_sound = loadSound("crashed.wav");
 }  
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
   point_sound.loop();
+  crashed_sound.loop();
   player = createSprite(200, 200, 30, 30);
   house1 = createSprite(100,370,50,50);
   //house1.addImage("house1", house1_img);
@@ -655,7 +657,7 @@ function car_movement()
   if(player.collide(car1) || player.collide(car2) || player.collide(car3 || player.collide(car4)))
   {
     score = score -1;
-    //crash_sound.play()
+    crash_sound.play()
   }
 
 }
