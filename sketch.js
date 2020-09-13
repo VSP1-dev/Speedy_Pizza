@@ -32,8 +32,6 @@ function preload()
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
-  //point_sound.loop();
-  //crashed_sound.loop();
   player = createSprite(200, 200, 30, 30);
   player.addImage("player", player_image);
   house1 = createSprite(100,370,50,50);
@@ -660,7 +658,7 @@ function car_movement()
   if(player.collide(car1) || player.collide(car2) || player.collide(car3 || player.collide(car4)))
   {
     score = score -1;
-    crashed_sound.play()
+    //crashed_sound.play()
   }
 
 }
