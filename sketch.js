@@ -26,7 +26,7 @@ shop_img = loadImage("../images/pizza_house.png");
 function preload()
 {
   point_sound = loadSound("point.wav");
-  crashed_sound = loadSound("crashed.wav");
+  crashed_sound = loadSound("point_decreased.wav");
   player_image = loadImage("Mini_truck.png");
 }  
 
@@ -658,7 +658,7 @@ function car_movement()
   if(player.collide(car1) || player.collide(car2) || player.collide(car3 || player.collide(car4)))
   {
     score = score -1;
-    //crashed_sound.play()
+    crashed_sound.play()
   }
 
 }
