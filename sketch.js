@@ -27,14 +27,14 @@ function preload()
 {
   point_sound = loadSound("point.wav");
   crashed_sound = loadSound("point_decreased.wav");
-  player_image = loadImage("Mini_truck.png");
+  //player_image = loadImage("Mini_truck.png");
 }  
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
   player = createSprite(200, 200, 30, 30);
-  player.addImage("player", player_image);
-  player.scale = 0.2;
+  //player.addImage("player", player_image);
+  //player.scale = 0.2;
   house1 = createSprite(100,370,50,50);
   //house1.addImage("house1", house1_img);
   house1.scale = 1.5;
